@@ -24,5 +24,11 @@ namespace EIceblueStuffs.ICeblueHelper
             workSheet.Range["A1"].Text = "This is a sample Excel dcouemnt and created by Spire.XLS for .NET";
             workBook.SaveToFile(_xlsFilePath + _xlsFileName);
         }
+
+        public void ConvertToPDF()
+        {
+            workBook.LoadFromFile(_xlsFilePath + _xlsFileName);
+            workBook.SaveToFile(_xlsFilePath + "mySpirePDFFile.pdf");
+        }
     }
 }

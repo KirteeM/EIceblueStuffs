@@ -14,7 +14,8 @@ namespace EICeblueStuffs.Controllers
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
-            spireExcel.CreateSampleExcel();
+            spireExcel.CreateSampleExcel(); //Create a sample
+            spireExcel.ConvertToPDF(); //Convert to pdf
 
             return View();
         }
